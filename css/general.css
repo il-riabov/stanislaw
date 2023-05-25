@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "mc"; 
+    src: url("../font/Inter-Medium.ttf"); 
+} 
+@font-face {
+    font-family: "bc";  
+    src: url("../font/Inter-Bold.ttf"); 
+} 
+*, *:after, *:before { box-sizing: border-box; }
+
+body { cursor: default; }
+.head { background-color: #333333; display: flex; color: white; font-weight: 200; 
+    align-items: center; justify-content: space-between; padding: 20px; font-family: bc;
+    font-size: 20px;
+}
+.head-logo { display: flex; justify-content: space-between; align-items: center; }
+.logo { width: 50px; }
+.burger { display: none; }
+.btn-menu, .btn-close { width: 30px; cursor: pointer;}
+.btn-close { display: none;}
+.head-nav { display: flex; flex-wrap: wrap; justify-content: center;}
+.nav-item { margin: 10px 15px; cursor: pointer; display: flex; align-items: center; color: white; text-decoration: none;}
+.head-aut_reg { display: flex; flex-wrap: wrap; justify-content: center;}
+.head-btn { text-decoration: none; color: white; border: 1px solid white; 
+    padding: 10px 15px; border-radius: 10px; margin: 10px 10px; transition: all 0.5s ease;
+}
+.head-btn:hover { background-color: white; color: #333333; }
+/* ----------------------------------- */
+.fdff { height: 50px;}
+.menu { position: absolute; 
+    background-color: white; border-radius: 10px; font-family: bc; 
+    box-shadow: 0px 0px 5px 1px #333333; position: absolute; left: 50%; top: 80px;}
+.menu-list {width: 100%; padding: 8px; }
+.menu-item { margin: 15px 0px; }
+.menu-button {font: inherit;  border: 0; padding: 8px 8px; padding-right: 36px; 
+    width: 100%; border-radius: 8px; text-align: left; background-color: white; 
+    color: #333333; cursor: pointer; text-decoration: none;}
+.menu-button:hover { background-color: gainsboro; }
+
+@media screen and (max-width: 1000px) {
+    .head { flex-direction: column; }
+    .head-nav, .head-aut_reg { margin: 20px 0px; display: none;}
+    .burger { display: block; }
+    .head-logo { width: 100%; }
+    .head-nav { margin-top: 50px; }
+    .menu { top: 180px; left: 60%; }
+}
+
+@media screen and (max-width: 835px) {
+    .menu { left: 30%; } 
+}
+
+@media screen and (max-width: 459px) {
+    .menu { top: 220px; left: 5%; }
+}
+
+@media screen and (max-width: 360px) {
+    .head-nav { flex-direction: column; align-items: center; }
+    .menu {  }
+}
+
